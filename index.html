@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>portfolio · black & gold · minimal</title>
-    <!-- Inter font - clean & luxurious -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    <title>portfolio · black & gold</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -15,13 +14,12 @@
 
         body {
             background-color: #0a0c0f;
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-family: 'Inter', sans-serif;
             color: #f5f5f7;
             padding: 2rem 1.5rem;
             display: flex;
             flex-direction: column;
             align-items: center;
-            line-height: 1.5;
         }
 
         .portfolio-container {
@@ -29,26 +27,17 @@
             width: 100%;
         }
 
-        /* --- PROFILE SECTION – black, gold, white --- */
+        /* PROFILE SECTION */
         .profile-section {
             display: flex;
             flex-wrap: wrap;
             gap: 2.8rem;
             align-items: center;
-            justify-content: space-between;
             background: #0e1115;
             border-radius: 48px;
             padding: 2.4rem 3rem;
             margin-bottom: 3rem;
             border: 1px solid rgba(212, 175, 55, 0.3);
-            box-shadow: 0 20px 35px -12px rgba(0,0,0,0.9), 0 0 0 1px rgba(212,175,55,0.1) inset;
-        }
-
-        .profile-avatar {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 0.6rem;
         }
 
         .avatar-frame {
@@ -57,25 +46,20 @@
             border-radius: 50%;
             background: linear-gradient(145deg, #d4af37, #b38f2a);
             padding: 3px;
-            box-shadow: 0 8px 28px rgba(212, 175, 55, 0.4);
         }
 
         .avatar-inner {
             width: 100%;
             height: 100%;
             border-radius: 50%;
-            background: #1c1f24;
-            display: flex;
-            align-items: center;
-            justify-content: center;
             overflow: hidden;
+            background: #1c1f24;
         }
 
         .avatar-inner img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            display: block;
         }
 
         .avatar-caption {
@@ -83,71 +67,56 @@
             color: #d4af37;
             letter-spacing: 3px;
             text-transform: uppercase;
-            font-weight: 600;
-            margin-top: 0.3rem;
-            border-top: 1px solid #d4af37;
-            padding-top: 0.6rem;
+            margin-top: 0.5rem;
+            text-align: center;
         }
 
         .profile-bio {
             flex: 1;
-            min-width: 300px;
         }
 
         .profile-bio h1 {
             font-size: 2.8rem;
             font-weight: 700;
-            letter-spacing: -1px;
             color: white;
             margin-bottom: 0.2rem;
-            line-height: 1.1;
         }
 
         .gold-accent {
             color: #d4af37;
             border-bottom: 2px solid #d4af37;
-            display: inline-block;
-            padding-bottom: 2px;
         }
 
         .badge {
-            background: transparent;
+            display: inline-block;
+            border: 1px solid #d4af37;
             color: #d4af37;
-            font-size: 0.75rem;
-            font-weight: 600;
             padding: 0.3rem 1.2rem;
             border-radius: 60px;
-            display: inline-block;
+            font-size: 0.75rem;
             letter-spacing: 2px;
             margin: 0.8rem 0 1.2rem;
-            border: 1px solid #d4af37;
             text-transform: uppercase;
         }
 
         .value-text {
-            font-size: 1.18rem;
-            color: #eef2f6;
-            margin: 1.2rem 0 1rem;
-            font-weight: 400;
-            max-width: 700px;
             background: rgba(10, 12, 15, 0.7);
             padding: 1.3rem 1.8rem;
-            border-radius: 24px;
             border-left: 6px solid #d4af37;
-            border-right: 1px solid rgba(212, 175, 55, 0.2);
+            border-radius: 24px;
+            font-size: 1.18rem;
             line-height: 1.65;
+            margin-bottom: 1.2rem;
         }
 
         .value-text strong {
             color: #d4af37;
-            font-weight: 700;
         }
 
         .why-list {
             display: flex;
             flex-wrap: wrap;
             gap: 1rem;
-            margin-top: 1.2rem;
         }
 
         .why-item {
@@ -155,68 +124,47 @@
             border: 1px solid #2f353c;
             border-radius: 100px;
             padding: 0.55rem 1.6rem;
-            font-size: 0.9rem;
-            color: #f0f3f7;
             display: flex;
             align-items: center;
             gap: 0.6rem;
-            box-shadow: 0 2px 0 #0a0c0f;
         }
 
         .gold-dot {
-            display: inline-block;
             width: 6px;
             height: 6px;
             background: #d4af37;
-            border-radius: 1px;
             transform: rotate(45deg);
         }
 
         .extended-bio {
             color: #cbd5e1;
             margin-top: 1.6rem;
-            font-size: 0.95rem;
-            border-bottom: 1px dashed #d4af37;
             padding-bottom: 0.6rem;
+            border-bottom: 1px dashed #d4af37;
             max-width: 90%;
-            font-weight: 350;
-            letter-spacing: 0.2px;
-            line-height: 1.7;
         }
 
-        /* --- PROJECT CARDS – with REAL IMAGE PLACEHOLDERS --- */
+        /* PROJECT SECTION */
         .section-title {
             font-size: 1.8rem;
             font-weight: 600;
-            margin: 2.8rem 0 1.8rem 0.4rem;
-            color: white;
+            margin: 2.8rem 0 1.8rem;
             display: flex;
             align-items: center;
             gap: 1rem;
         }
-        
+
         .title-marker {
-            display: inline-block;
             width: 10px;
             height: 10px;
             background: #d4af37;
-            border-radius: 1px;
             transform: rotate(45deg);
-        }
-
-        .section-sub {
-            font-size: 1rem;
-            margin-left: 0.8rem;
-            color: #94a3b8;
-            font-weight: 400;
-            letter-spacing: 0.5px;
         }
 
         .two-column-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 2.4rem;
-            margin-top: 1rem;
         }
 
         @media (max-width: 850px) {
@@ -228,12 +176,8 @@
         .project-card {
             background: #111518;
             border-radius: 28px;
-            padding: 2rem 2rem 2.4rem;
+            padding: 2rem;
             border: 1px solid #2d2f33;
-            box-shadow: 0 18px 30px -14px rgba(0,0,0,0.8);
-            transition: all 0.25s ease;
-            display: flex;
-            flex-direction: column;
             position: relative;
         }
 
@@ -244,14 +188,6 @@
             width: 60px;
             height: 3px;
             background: #d4af37;
-            border-radius: 0 0 4px 4px;
-        }
-
-        .project-card:hover {
-            border-color: #d4af37;
-            box-shadow: 0 25px 40px -16px rgba(212, 175, 55, 0.2), 0 0 0 1px rgba(212,175,55,0.1) inset;
-            transform: translateY(-5px);
-            background: #141a20;
         }
 
         .screenshot-frame {
@@ -263,13 +199,10 @@
         }
 
         .screenshot {
-            background: #0a0c0f;
-            border-radius: 12px;
             aspect-ratio: 16 / 10;
             width: 100%;
-            display: flex;
             overflow: hidden;
-            border: 1px solid #2d3239;
+            border-radius: 12px;
         }
 
         .website-image {
@@ -277,13 +210,6 @@
             height: 100%;
             object-fit: cover;
             object-position: top;
-            display: block;
-            transition: transform 0.2s ease;
-            border-radius: 11px;
-        }
-
-        .project-card:hover .website-image {
-            transform: scale(1.01);
         }
 
         .project-title {
@@ -292,24 +218,11 @@
             color: white;
             display: flex;
             justify-content: space-between;
-            align-items: center;
             margin-bottom: 0.75rem;
-            letter-spacing: -0.02em;
-        }
-
-        .project-title span:first-child {
-            color: white;
-            font-weight: 500;
-            background: none;
-            -webkit-background-clip: unset;
-            background-clip: unset;
-            color: white;
         }
 
         .project-indicator {
             color: #d4af37;
-            font-size: 1.2rem;
-            font-weight: 300;
         }
 
         .project-desc {
@@ -318,120 +231,39 @@
             line-height: 1.65;
             border-left: 2px solid #d4af37;
             padding-left: 1.2rem;
-            margin: 0.2rem 0 1rem;
-            font-weight: 350;
-        }
-
-        /* ----- LINK CONTAINER – INDEPENDENT PER PROJECT ----- */
-        .website-link-container {
-            margin: 0.5rem 0 1rem 0;
-            padding: 0.75rem 1rem;
-            background: #0c0f12;
-            border-radius: 12px;
-            border: 1px solid #2a2e34;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            transition: border 0.2s;
-        }
-
-        .website-link-container:hover {
-            border-color: #d4af37;
-            background: #11171d;
-        }
-
-        .link-label {
-            font-size: 0.65rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            color: #94a3b8;
-            font-weight: 500;
-        }
-
-        .live-url {
-            font-size: 0.75rem;
-            color: #d4af37;
-            text-decoration: none;
-            font-weight: 500;
-            max-width: 200px;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            border-bottom: 1px dashed rgba(212,175,55,0.4);
-            padding-bottom: 2px;
-        }
-
-        .live-url:hover {
-            color: #e4c154;
-            border-bottom-color: #d4af37;
-        }
-
-        .btn-group {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin-top: 0.2rem;
-            flex-wrap: wrap;
-            gap: 0.8rem;
-        }
-
-        .cta-tag {
-            background: rgba(212, 175, 55, 0.05);
-            padding: 0.55rem 1.3rem;
-            border-radius: 40px;
-            font-size: 0.75rem;
-            font-weight: 600;
-            color: #d4af37;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            border: 1px solid rgba(212, 175, 55, 0.25);
-            letter-spacing: 1.5px;
-            text-transform: uppercase;
+            margin-bottom: 1.5rem;
         }
 
         .btn-view {
+            width: 100%;
             background: transparent;
             color: #d4af37;
             border: 1px solid #d4af37;
-            padding: 0.7rem 2rem;
+            padding: 0.9rem;
             border-radius: 40px;
-            font-size: 0.8rem;
+            font-size: 0.9rem;
             font-weight: 600;
-            display: inline-flex;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            text-decoration: none;
+            display: flex;
             align-items: center;
             justify-content: center;
-            gap: 0.6rem;
-            cursor: pointer;
+            gap: 0.8rem;
             transition: 0.15s;
-            text-decoration: none;
-            text-transform: uppercase;
-            letter-spacing: 2px;
         }
 
         .btn-view:hover {
             background: #d4af37;
             color: #0a0c0f;
-            border-color: #d4af37;
         }
 
         .icon-svg {
-            width: 14px;
-            height: 14px;
+            width: 16px;
+            height: 16px;
             stroke: currentColor;
             stroke-width: 1.8;
             fill: none;
-            stroke-linecap: square;
-        }
-
-        .btn-view:hover .icon-svg {
-            stroke: #0a0c0f;
-        }
-
-        .cta-tag .icon-svg {
-            stroke: #d4af37;
-            width: 12px;
-            height: 12px;
         }
 
         .footer-note {
@@ -440,7 +272,6 @@
             border-top: 1px solid #23282e;
             padding-top: 2.2rem;
             text-align: center;
-            font-size: 0.85rem;
             letter-spacing: 2px;
             text-transform: uppercase;
         }
@@ -448,83 +279,17 @@
         .footer-note span {
             color: #d4af37;
         }
-
-        .profile-img {
-            object-fit: cover;
-            width: 100%;
-            height: 100%;
-        }
-
-        /* minimal instruction - subtle, only visible to you */
-        .image-instruction {
-            background: rgba(212,175,55,0.03);
-            padding: 0.3rem 1.2rem;
-            border-radius: 40px;
-            color: #94a3b8;
-            font-size: 0.7rem;
-            text-transform: uppercase;
-            border: 0.5px solid rgba(212,175,55,0.2);
-            margin-bottom: 0.5rem;
-            display: inline-block;
-            letter-spacing: 1.5px;
-        }
-
-        code {
-            background: #151a1f;
-            padding: 0.2rem 0.4rem;
-            border-radius: 6px;
-            color: #d4af37;
-            font-size: 0.75rem;
-        }
-        
-        /* ----- VISIBLE URL INSERTION FIELDS FOR BUTTONS ----- */
-        .button-url-field {
-            margin-top: 0.75rem;
-            padding: 0.6rem 1rem;
-            background: #0a0d10;
-            border-radius: 40px;
-            border: 1px dashed #d4af37;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-        
-        .button-url-label {
-            font-size: 0.6rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            color: #d4af37;
-            font-weight: 700;
-            background: rgba(212,175,55,0.1);
-            padding: 0.2rem 0.8rem;
-            border-radius: 30px;
-        }
-        
-        .button-url-example {
-            font-size: 0.7rem;
-            color: #94a3b8;
-            font-family: monospace;
-            background: #151e24;
-            padding: 0.2rem 0.8rem;
-            border-radius: 30px;
-            border: 1px solid #2a3a44;
-        }
-        
-        .button-url-example strong {
-            color: #d4af37;
-            font-weight: 600;
-        }
     </style>
 </head>
 <body>
     <div class="portfolio-container">
-        <!-- ===== PROFILE SECTION ===== -->
+        <!-- PROFILE SECTION -->
         <div class="profile-section">
-            <div class="profile-avatar">
+            <div style="display: flex; flex-direction: column; align-items: center;">
                 <div class="avatar-frame">
                     <div class="avatar-inner">
-                        <!-- REPLACE WITH YOUR PROFILE PICTURE -->
-                        <img class="profile-img" src="mike.jpeg" alt="profile portrait">
+                        <!-- YOUR PROFILE IMAGE HERE -->
+                        <img class="profile-img" src="mike.jpeg" alt="profile">
                     </div>
                 </div>
                 <div class="avatar-caption">WEB ARCHITECT</div>
@@ -536,7 +301,7 @@
                 
                 <div class="value-text">
                     <strong>Your website should be as unique as your business.</strong> 
-                    I don't use templates — I craft bespoke digital experiences that load fast, look bold, and convert visitors. Every line of code is written with purpose.
+                    I don't use templates — I craft bespoke digital experiences that load fast, look bold, and convert visitors.
                 </div>
 
                 <div class="why-list">
@@ -545,143 +310,77 @@
                     <div class="why-item"><span class="gold-dot"></span> PERFORMANCE FIRST</div>
                     <div class="why-item"><span class="gold-dot"></span> DEDICATED SUPPORT</div>
                 </div>
-
-                <div class="extended-bio">
-                WHY PARTNER WITH ME — Because you deserve more than a generic theme. I take time to understand your goals and translate them into a website that builds trust, tells your story, and grows your revenue. Your success is my portfolio.
-                </div>
             </div>
         </div>
 
-        <!-- ===== PORTFOLIO TITLE ===== -->
+        <!-- PROJECTS TITLE -->
         <div class="section-title">
             <span class="title-marker"></span> LIVE PROJECTS 
-            <span class="section-sub">/ two website previews</span>
-        </div>
-
-        <!-- This instruction is only visible to you during editing -->
-        <div style="display: flex; justify-content: flex-start; margin-bottom: 0.5rem;">
-            <span class="image-instruction">⊟ REPLACE IMAGES AND LINKS BELOW — TWO SEPARATE WEBSITES</span>
+            <span style="color: #94a3b8; font-size: 1rem; font-weight: 400;">/ two websites</span>
         </div>
 
         <div class="two-column-grid">
             
-            <!-- ========== PROJECT 1 – MAISON ÉCLAT ========== -->
+            <!-- PROJECT 1: MAISON ÉCLAT -->
             <div class="project-card">
                 <div class="gold-top-border"></div>
                 <div class="screenshot-frame">
                     <div class="screenshot">
-                        <!-- YOUR REAL WEBSITE IMAGE FOR PROJECT 1 -->
-                        <img class="website-image" 
-                             src="Screenshot 2026-02-12 184408.png" 
-                             alt="Maison Éclat website">
+                        <!-- YOUR SCREENSHOT FOR MAISON ÉCLAT -->
+                        <img class="website-image" src="Screenshot 2026-02-12 184408.png" alt="Maison Éclat">
                     </div>
-                </div>
-                
-                <!-- PROJECT 1 WEBSITE LINK – REPLACE WITH YOUR ACTUAL URL -->
-                <div class="website-link-container">
-                    <span class="link-label">LIVE URL</span>
-                    <a href="#" class="live-url" target="_blank" rel="noopener">
-                        www.maisoneclat.com
-                    </a>
                 </div>
                 
                 <div class="project-title">
                     <span>MAISON ÉCLAT</span>
                     <span class="project-indicator">—</span>
                 </div>
+                
                 <div class="project-desc">
-                    Luxury jewelry e-commerce · custom dark UI, gold accents, seamless cart. 98% mobile speed.
-                </div>
-                <div class="btn-group">
-                    <span class="cta-tag">
-                        <svg class="icon-svg" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2" stroke="currentColor" fill="none"/><line x1="9" y1="9" x2="15" y2="15" stroke="currentColor"/><line x1="15" y1="9" x2="9" y2="15" stroke="currentColor"/></svg>
-                        LIVE PREVIEW
-                    </span>
-                    <!-- PROJECT 1 BUTTON – INSERT YOUR URL IN href="YOUR_URL_HERE" -->
-                    <a href="#" class="btn-view" target="_blank" rel="noopener">
-                        <svg class="icon-svg" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" fill="none"/></svg>
-                        VIEW WEBSITE
-                    </a>
+                    Luxury jewelry e-commerce · custom dark UI, gold accents, seamless cart.
                 </div>
                 
-                <!-- CLEAR URL INSERTION FIELD FOR PROJECT 1 BUTTON -->
-                <div class="button-url-field">
-                    <span class="button-url-label">INSERT URL HERE</span>
-                    <span class="button-url-example">href="<strong>https://demo2-eta-one.vercel.app/</strong>"</span>
-                </div>
+                <!-- VIEW WEBSITE BUTTON – PUT YOUR MAISON ÉCLAT URL HERE -->
+                <a href="https://demo2-c3bqc3bwe-verizon-cpus-projects.vercel.app" class="btn-view" target="_blank">
+                
+                    <svg class="icon-svg" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    VIEW WEBSITE
+                </a>
+                <!-- ↑ REPLACE THE URL ABOVE WITH YOUR ACTUAL WEBSITE LINK ↑ -->
             </div>
 
-            <!-- ========== PROJECT 2 – STUDIO NOIR ========== -->
+            <!-- PROJECT 2: STUDIO NOIR -->
             <div class="project-card">
                 <div class="gold-top-border"></div>
                 <div class="screenshot-frame">
                     <div class="screenshot">
-                        <!-- YOUR REAL WEBSITE IMAGE FOR PROJECT 2 -->
-                        <img class="website-image" 
-                             src="Screenshot 2026-02-05 143136.png" 
-                             alt="Studio Noir website">
+                        <!-- YOUR SCREENSHOT FOR STUDIO NOIR -->
+                        <img class="website-image" src="Screenshot 2026-02-05 143136.png" alt="Studio Noir">
                     </div>
-                </div>
-
-                <!-- PROJECT 2 WEBSITE LINK – REPLACE WITH YOUR ACTUAL URL -->
-                <div class="website-link-container">
-                    <span class="link-label">LIVE URL</span>
-                    <a href="#" class="live-url" target="_blank" rel="noopener">
-                        oton2.hetsc.com
-                    </a>
                 </div>
                 
                 <div class="project-title">
                     <span>STUDIO NOIR</span>
                     <span class="project-indicator">—</span>
                 </div>
+                
                 <div class="project-desc">
                     Creative agency portfolio · cinematic scroll, case studies, integrated CMS.
                 </div>
-                <div class="btn-group">
-                    <span class="cta-tag">
-                        <svg class="icon-svg" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3" stroke="currentColor" fill="none"/><path d="M22 12c0 5.52-4.48 10-10 10S2 17.52 2 12 6.48 2 12 2s10 4.48 10 10z" stroke="currentColor" fill="none"/></svg>
-                        FEATURED
-                    </span>
-                    <!-- PROJECT 2 BUTTON – INSERT YOUR URL IN href="YOUR_URL_HERE" -->
-                    <a href="#" class="btn-view" target="_blank" rel="noopener">
-                        <svg class="icon-svg" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" fill="none"/></svg>
-                        VIEW WEBSITE
-                    </a>
-                </div>
                 
-                <!-- CLEAR URL INSERTION FIELD FOR PROJECT 2 BUTTON -->
-                <div class="button-url-field">
-                    <span class="button-url-label">INSERT URL HERE</span>
-                    <span class="button-url-example">href="<strong>oton2.hetsc.com</strong>"</span>
-                </div>
+                <!-- VIEW WEBSITE BUTTON – PUT YOUR STUDIO NOIR URL HERE -->
+                <a href="https://oton2.hetsc.com" class="btn-view" target="_blank">
+                    <svg class="icon-svg" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    VIEW WEBSITE
+                </a>
+                <!-- ↑ REPLACE THE URL ABOVE WITH YOUR ACTUAL WEBSITE LINK ↑ -->
             </div>
         </div>
 
-        <!-- subtle separator - clean, no instructions -->
-        <div style="margin-top: 3rem; display: flex; justify-content: center;">
-            <div style="background: rgba(212, 175, 55, 0.02); padding: 0.8rem 2rem; border-radius: 40px; border: 0.5px solid rgba(212,175,55,0.2); color: #94a3b8; font-size: 0.75rem; letter-spacing: 2px; text-transform: uppercase;">
-                TWO WEBSITES · INDEPENDENT LINKS FOR EACH PROJECT
-            </div>
-        </div>
-
-        <!-- ===== CLEAN FOOTER – NO INSTRUCTIONS, JUST BRAND ===== -->
+        <!-- FOOTER - CLEAN, NO INSTRUCTIONS -->
         <div class="footer-note">
             <span>◆</span> BLACK · GOLD · WHITE <span>◆</span>
         </div>
     </div>
-
-    <script>
-        // Optional - remove this alert after adding real URLs
-        document.querySelectorAll('.btn-view').forEach(btn => {
-            btn.addEventListener('click', (e) => {
-                const href = btn.getAttribute('href');
-                if (href === '#') {
-                    e.preventDefault();
-                    alert('🔗 PLEASE ADD YOUR WEBSITE URL TO THIS BUTTON');
-                }
-            });
-        });
-    </script>
 </body>
 </html>
